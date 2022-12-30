@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  // step 1 : first we create a function & pass two parameter (array1,array2)
+
+  // step 2 : then we run a loop to the  array1
+
+  // step 3 : then we run a nested loop  to the  array2
+
+  // step 4 : then we compair the value of both array for finding same value
+
+  // step 5 : if the value are match then we store the value in new array 
+ //             and give condition to remove the duplicate value.
+
+  // step 6 : then return it & check the output is [1,2,4];
+
+  let arr1 = [1, 2, 2, 3, 3, 3, 4, 5];
+  let arr2 = [2, 8, 4, 1];
+
+  function findComonValue(array1, array2) {
+         let arr3 = [];
+
+    for (let i = 0; i < array1.length; i++) {
+      for (let j = 0; j < array2.length; j++) {
+        if (array1[i] === array2[j]) {
+          if (!arr3.includes(array1[i])) {
+            arr3.push(array1[i]);
+          }
+        }
+      }
+    }
+    return arr3;
+  }
+  console.log(findComonValue(arr1,arr2)); // output [1,2,4]
+</script>
